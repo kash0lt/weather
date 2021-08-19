@@ -1,6 +1,10 @@
 import tkinter as tk
 import requests
 from apiid import myapiid
+# myapiid inits a keyvalue that comes from THIS users openweathermap.org account
+# class myapiid():
+#    def __init__(self):
+#       self.keyvalue = '<your-key-goes-here>'
 
 HEIGHT = 500
 WIDTH = 600
