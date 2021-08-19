@@ -20,7 +20,7 @@ def getWeather(cityToSearch):
 
 
 def format_weather(weatherjsonstring):
-    print(weatherjsonstring)
+    # print(weatherjsonstring)
     try:
         w_name = weatherjsonstring['name']
         w_weather = weatherjsonstring['weather'][0]['description']
@@ -28,7 +28,7 @@ def format_weather(weatherjsonstring):
         w_temp = weatherjsonstring['main']['temp']
         w_feels = weatherjsonstring['main']['feels_like']
         w_humidity = weatherjsonstring['main']['humidity']
-        print(w_name, w_weather, w_temp, w_feels, w_humidity)
+        # print(w_name, w_weather, w_temp, w_feels, w_humidity)
         finalStr = 'City: %s \nConditions: %s \nTemp: %s (°F) \nFeels Like: %s (°F) \nHumidity: %s %%' \
             % (w_name, w_weather, w_temp, w_feels, w_humidity)
     except:
@@ -51,7 +51,8 @@ if __name__ == '__main__':
     button.place(relx=0.66, relwidth=0.33, relheight=1)
     frameLower = tk.Frame(root, bg=CANVAS, bd=5)
     frameLower.place(anchor='n', relx=0.5, rely=0.25, relwidth=0.85, relheight=0.6)
-    label = tk.Label(frameLower, text='', bg='white', font=40, anchor='nw', justify='left', bd=4)
+    label = tk.Label(frameLower, text='', bg='white', font=40, anchor='w', justify='left', bd=4)
     label.place(relwidth=1, relheight=1)
+    label['text'] = 'Enter either you city above\nor you may use a zip code\nor you may use a city, xx\nwhere xx is a country code'
 
     root.mainloop()
