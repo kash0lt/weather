@@ -1,3 +1,4 @@
+.DS*
 apiid.py
 __pycache__/
 *.sublime-*
